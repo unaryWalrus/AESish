@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Copyright 2021 Eli Knisbacher
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+<!-- 
+The GNU GPL is provided on https://aesish.landfish.repl.co/license.html and can be copied on https://aesish.landfish.repl.co/copying.html. -->
+<html>
+
+<head>
+  <title>AESish</title>
+  <link rel = "icon" type = "image/x-icon" href = "/favicon.ico">
+  <link rel = "stylesheet" href = "/style.css">
+</head>
+
+<body style="overflow: hidden">
+  <textarea id="tStr"></textarea>
+  <br />
+  <textarea id="kStr"></textarea>
+  <br />
+  <button onclick="tStr.value = encrypt(tStr.value, kStr.value, 'e') || tStr.value">Encrypt</button>
+  <button id="decrypt" onclick="tStr.value = encrypt(tStr.value, kStr.value, 'd') || tStr.value">Decrypt</button>
+  <button id = "conceal" onclick = "steg()">Conceal</button>
+  <script src = "script.js"></script>
+</body
+
+</html>
