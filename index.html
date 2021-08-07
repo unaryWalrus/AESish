@@ -23,14 +23,89 @@ The GNU GPL is provided on https://aesish.landfish.repl.co/license.html and can 
 </head>
 
 <body style="overflow: hidden">
-  <textarea id="tStr"></textarea>
+  <textarea id = "tStr"></textarea>
   <br />
-  <textarea id="kStr"></textarea>
+  <textarea id = "kStr" style = "margin-top: -1px;"></textarea>
   <br />
-  <button onclick="tStr.value = encrypt(tStr.value, kStr.value, 'e') || tStr.value">Encrypt</button>
-  <button id="decrypt" onclick="tStr.value = encrypt(tStr.value, kStr.value, 'd') || tStr.value">Decrypt</button>
+  <button onclick= "tStr.value = encrypt(tStr.value, kStr.value || 'This is a horrible key')">Encrypt</button>
+  <button id = "decrypt" onclick="tStr.value = decrypt(tStr.value, kStr.value || 'This is a horrible key')">Decrypt</button>
   <button id = "conceal" onclick = "steg()">Conceal</button>
+  <button id = "license" onclick = "gpl()">License</button>
+  <style>
+  body {
+    --zoom: 0.6;
+    filter: invert(90%) hue-rotate(180deg);
+    position: relative;
+    top: 10px;
+    left: -1px;
+    padding-top: calc(5vh * var(--zoom));
+    background-color: black;
+  }
+  
+  button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    position: relative;
+    top: -11px;
+    width: calc(20vw * var(--zoom));
+    height: calc(4vw * var(--zoom));
+    font-size: calc(3vw * var(--zoom));
+  }
+  
+  button:focus {
+    border-color: orange;
+    z-index: 500;
+  }
+  
+  button:active {
+    border-color: rgb(0, 163, 163);
+  }
+  
+  button:hover:not(:active):not(:focus) {
+    border-color: #505050;
+    z-index: 99999999999999;
+  }
+  
+  #decrypt {
+    position: relative;
+    left: -5px;
+  }
+  
+  #conceal {
+    position: relative;
+    left: -10px;
+  }
+  
+  #kStr {
+    position: relative;
+    top: -5px;
+    z-index: 1;
+  }
+  
+  textarea {
+    resize: vertical;
+    width: calc(100vw * var(--zoom) - 20px);
+    height: calc(30vh * var(--zoom));
+    font-family: arial;
+    font-size: min(max(1.6vw * var(--zoom), 12px), 30px);
+    position: relative;
+  }
+  
+  *:focus {
+    outline: none;
+    z-index: 5;
+  }
+  
+  textarea:focus {
+    border-color: orange
+  }
+  
+  textarea:active {
+    border-color: orange;
+  }
+  </style>
   <script src = "script.js"></script>
-</body
+</body>
 
 </html>

@@ -43,6 +43,11 @@ button:hover:not(:active):not(:focus) {
   left: -10px;
 }
 
+#license {
+  position: relative;
+  left: -15px;
+}
+
 #kStr {
   position: relative;
   top: -5px;
