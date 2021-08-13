@@ -1,3 +1,4 @@
+
 if (location.href === 'https://aesish.landfish.repl.co/#steg')
   steg()
 if (localStorage.getItem('text')) {
@@ -25,7 +26,7 @@ function splice(sB3, kB3) {
   let kI = -1
   for (let i = 0; i < sB3.length; i++) {
     kI++
-    if (kI == kB3.length) {
+    if (kI === kB3.length) {
         kI = 0
     }
     sStr += +sB3[i] + +kB3[kI] + 1
@@ -47,100 +48,76 @@ function unsplice(sB3, kB3) {
 }
 function obfuscate(b3) {
   b3 = b3
-    .replace(/00/g, 'a')
-    .replace(/01/g, 'b')
-    .replace(/02/g, 'c')
-    .replace(/03/g, 'd')
-    .replace(/04/g, 'e')
-    .replace(/05/g, 'f')
-    .replace(/10/g, 'g')
-    .replace(/11/g, 'h')
-    .replace(/12/g, 'i')
-    .replace(/13/g, 'j')
-    .replace(/14/g, 'k')
-    .replace(/15/g, 'l')
-    .replace(/20/g, 'm')
-    .replace(/21/g, 'n')
-    .replace(/22/g, 'o')
-    .replace(/23/g, 'p')
-    .replace(/24/g, 'q')
-    .replace(/25/g, 'r')
-    .replace(/30/g, 's')
-    .replace(/31/g, 't')
-    .replace(/32/g, 'u')
-    .replace(/33/g, 'v')
-    .replace(/34/g, 'w')
-    .replace(/35/g, 'x')
-    .replace(/40/g, 'y')
-    .replace(/41/g, 'z')
-    .replace(/42/g, 'A')
-    .replace(/43/g, 'B')
-    .replace(/44/g, 'C')
-    .replace(/45/g, 'D')
-    .replace(/50/g, 'E')
-    .replace(/51/g, 'F')
-    .replace(/52/g, 'G')
-    .replace(/53/g, 'H')
-    .replace(/54/g, 'I')
-    .replace(/55/g, 'J')
-    .replace(/0/g, 'K')
-    .replace(/1/g, 'L')
-    .replace(/2/g, 'M')
-    .replace(/3/g, 'N')
-    .replace(/4/g, 'O')
-    .replace(/5/g, 'P')
+    .replace(/11/g, 'a')
+    .replace(/12/g, 'b')
+    .replace(/13/g, 'c')
+    .replace(/14/g, 'd')
+    .replace(/15/g, 'e')
+    .replace(/21/g, 'f')
+    .replace(/22/g, 'g')
+    .replace(/23/g, 'h')
+    .replace(/24/g, 'i')
+    .replace(/25/g, 'j')
+    .replace(/31/g, 'k')
+    .replace(/32/g, 'l')
+    .replace(/33/g, 'm')
+    .replace(/34/g, 'n')
+    .replace(/35/g, 'o')
+    .replace(/41/g, 'p')
+    .replace(/42/g, 'q')
+    .replace(/43/g, 'r')
+    .replace(/44/g, 's')
+    .replace(/45/g, 't')
+    .replace(/51/g, 'u')
+    .replace(/52/g, 'v')
+    .replace(/53/g, 'w')
+    .replace(/54/g, 'x')
+    .replace(/55/g, 'y')
+    .replace(/1/g, 'z')
+    .replace(/2/g, 'A')
+    .replace(/3/g, 'B')
+    .replace(/4/g, 'C')
+    .replace(/5/g, 'D')
   return b3
 }
 function unobfuscate(str) {
   str = str
-    .replace(/a/g, '00')
-    .replace(/b/g, '01')
-    .replace(/c/g, '02')
-    .replace(/d/g, '03')
-    .replace(/e/g, '04')
-    .replace(/f/g, '05')
-    .replace(/g/g, '10')
-    .replace(/h/g, '11')
-    .replace(/i/g, '12')
-    .replace(/j/g, '13')
-    .replace(/k/g, '14')
-    .replace(/l/g, '15')
-    .replace(/m/g, '20')
-    .replace(/n/g, '21')
-    .replace(/o/g, '22')
-    .replace(/p/g, '23')
-    .replace(/q/g, '24')
-    .replace(/r/g, '25')
-    .replace(/s/g, '30')
-    .replace(/t/g, '31')
-    .replace(/u/g, '32')
-    .replace(/v/g, '33')
-    .replace(/w/g, '34')
-    .replace(/x/g, '35')
-    .replace(/y/g, '40')
-    .replace(/z/g, '41')
-    .replace(/A/g, '42')
-    .replace(/B/g, '43')
-    .replace(/C/g, '44')
-    .replace(/D/g, '45')
-    .replace(/E/g, '50')
-    .replace(/F/g, '51')
-    .replace(/G/g, '52')
-    .replace(/H/g, '53')
-    .replace(/I/g, '54')
-    .replace(/J/g, '55')
-    .replace(/K/g, '0')
-    .replace(/L/g, '1')
-    .replace(/M/g, '2')
-    .replace(/N/g, '3')
-    .replace(/O/g, '4')
-    .replace(/P/g, '5')
+    .replace(/a/g, '11')
+    .replace(/b/g, '12')
+    .replace(/c/g, '13')
+    .replace(/d/g, '14')
+    .replace(/e/g, '15')
+    .replace(/f/g, '21')
+    .replace(/g/g, '22')
+    .replace(/h/g, '23')
+    .replace(/i/g, '24')
+    .replace(/j/g, '25')
+    .replace(/k/g, '31')
+    .replace(/l/g, '32')
+    .replace(/m/g, '33')
+    .replace(/n/g, '34')
+    .replace(/o/g, '35')
+    .replace(/p/g, '41')
+    .replace(/q/g, '42')
+    .replace(/r/g, '43')
+    .replace(/s/g, '44')
+    .replace(/t/g, '45')
+    .replace(/u/g, '51')
+    .replace(/v/g, '52')
+    .replace(/w/g, '53')
+    .replace(/x/g, '54')
+    .replace(/y/g, '55')
+    .replace(/z/g, '1')
+    .replace(/A/g, '2')
+    .replace(/B/g, '3')
+    .replace(/C/g, '4')
+    .replace(/D/g, '5')
   return str
 }
-function encrypt(str, key = 'ughhhh') {
+function encrypt(str, key) {
   return obfuscate(splice(b3(str), b3(key)))
 }
-function decrypt(str, key = 'ughhhh') {
+function decrypt(str, key) {
   return unB3(unsplice(unobfuscate(str), b3(key)))
 }
 //encryption algorithym end
@@ -156,7 +133,7 @@ function steg() {
     <p id = "concealText" contentEditable = "true" spellcheck = "false">${text || `Text to conceal/reveal`}</p>
     <div id = "concealFoot"></div>
     <p id = "carrierText" contentEditable = "true" spellcheck = "false" title = "Carrier text, default lorem ipsum"></p>
-    <button onclick = "concealText.innerHTML = conceal(concealText.innerHTML, carrierText.textContent)">Conceal</button>
+    <button onclick = "concealText.innerHTML = conceal(concealText.innerHTML, carrierText.innerHTML)">Conceal</button>
     <button onclick = "concealText.innerHTML = reveal(concealText.innerHTML, carrierText.textContent)">Reveal</button>
     <a id = "download" href = "data:,hi" style = "display: none;" download = "download"></a>
     <button onclick = "download.href = 'data:text/html;base64,' + btoa(concealText.innerHTML);download.click()">Download</button>
@@ -186,6 +163,11 @@ p:hover {
   border-color: #505050;
 }
 
+
+p:focus {
+  border-radius: 0px;
+}
+
 #concealText {
   margin-top: -4px;
 }
@@ -195,7 +177,7 @@ p:hover {
 }
 
 #carrierText {
-  margin-top: -15px;
+  margin-top: -17px;
 }
 
 #carrierText:active {
@@ -222,7 +204,7 @@ button {
   border-style: solid;
   border-color: gray;
   position: relative;
-  top: -15px;
+  top: -16px;
   width: calc(20vw * var(--zoom));
   height: calc(4vw * var(--zoom));
   font-size: calc(3vw * var(--zoom));
@@ -283,5 +265,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-The GNU GPL is provided on https://aesish.landfish.repl.co/license.html and can be copied on https://aesish.landfish.repl.co/copying.html`)
+The GNU GPL is provided on https://aesish.landfish.repl.co/license.html and can be copied on https://aesish.landfish.repl.co/copying.html
+`)
 }

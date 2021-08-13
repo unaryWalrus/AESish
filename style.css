@@ -34,23 +34,24 @@ button:hover:not(:active):not(:focus) {
 }
 
 #decrypt {
-  position: relative;
   left: -5px;
 }
 
 #conceal {
-  position: relative;
   left: -10px;
 }
 
 #license {
-  position: relative;
   left: -15px;
+}
+
+#cookie {
+  left: -20px;
+  width: 3em;
 }
 
 #kStr {
   position: relative;
-  top: -5px;
   z-index: 1;
 }
 
